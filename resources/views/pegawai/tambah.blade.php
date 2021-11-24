@@ -5,7 +5,6 @@
 </head>
 <body>
 
-	<h2><a href=""></a></h2>
 	<h3>Data Pegawai</h3>
 
 	<a href="/pegawai">Kembali</a>
