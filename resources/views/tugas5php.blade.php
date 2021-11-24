@@ -16,6 +16,7 @@ function luas(){
 
 <body>
         <h1>Hasil luas segitiga</h1>
+        <h2>dasd</h2>
         <p><?php luas();?></p>
 </body>
 
