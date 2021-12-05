@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
+    @extends('layout/happy')
 </head>
 <body>
-
+    @section('konten')
 	<h3>Data Tugas</h3>
 
 	<a href="/tugas/tambah"> + Tambah Tugas Baru</a>
@@ -34,6 +34,7 @@
 		</tr>
 		@endforeach
 	</table>
+    @endsection
 
 
 </body>

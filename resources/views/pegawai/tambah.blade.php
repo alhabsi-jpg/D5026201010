@@ -5,9 +5,10 @@
 </head>
 <body>
 
+	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
 	<h3>Data Pegawai</h3>
 
-	<a href="/pegawai">Kembali</a>
+	<a href="/pegawai"> Kembali</a>
 
 	<br/>
 	<br/>

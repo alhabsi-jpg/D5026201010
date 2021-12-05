@@ -1,11 +1,11 @@
 <html>
 <head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
+    @extends('layout/happy')
 </head>
 <body>
-
-	<h2>www.malasngoding.com</h2>
+    @section('konten')
 	<h3>Data Pegawai</h3>
+    <title>Data Pegawai</title>
 
 	<a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
 
@@ -34,6 +34,7 @@
 		</tr>
 		@endforeach
 	</table>
+    @endsection
 
 
 </body>

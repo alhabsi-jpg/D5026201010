@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ViewController;
+use App\Http\Controllers\AbsenController;
 use App\Http\Controllers\TugasController;
 use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\PengurusController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,6 +45,22 @@ Route::post('/tugas/store',[TugasController::class, 'store']);
 Route::get('/tugas/edit/{id}',[TugasController::class, 'edit']);
 Route::post('/tugas/update',[TugasController::class, 'update']);
 Route::get('/tugas/hapus/{id}',[TugasController::class, 'hapus']);
+//route databse pengurus
+Route::get('pengurus', [PengurusController::class, 'index']);
+Route::get('/pengurus/tambah',[PengurusController::class, 'tambah']);
+Route::post('/pengurus/store',[PengurusController::class, 'store']);
+Route::get('/pengurus/edit/{id}',[PengurusController::class, 'edit']);
+Route::post('/pengurus/update',[PengurusController::class, 'update']);
+Route::get('/pengurus/hapus/{id}',[PengurusController::class, 'hapus']);
+//route database absen
+Route::get('absen', [AbsenController::class, 'index']);
+Route::get('/absen/tambah',[AbsenController::class, 'tambah']);
+Route::post('/absen/store',[AbsenController::class, 'store']);
+Route::get('/absen/edit/{id}',[AbsenController::class, 'edit']);
+Route::post('/absen/update',[AbsenController::class, 'update']);
+Route::get('/absen/hapus/{id}',[AbsenController::class, 'hapus']);
+
+
 
 
 
