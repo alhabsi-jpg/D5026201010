@@ -5,7 +5,7 @@
 @section('konten')
 
 	<a href="/absen"> Kembali</a>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<br/>
     <h3>{{ $status }}</h3>
 	<br/>
@@ -32,34 +32,31 @@
             </div>
 
 
-            <div class="row">
-                <div class='col-lg-9'>
-                    <div class="form-group">
-                        <label for="dtpickerdemo" class="col-sm-2 control-label">Tanggal :</label>
-                        <div class='col-sm-4 input-group date' id='dtpickerdemo'>
-                            <input type='text' class="form-control" name="tanggal" required="required" value="{{ $a->Tanggal }}" />
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </span>
-                        </div>
-                    </div>
+            <div class="input-group mb-3">
+                <label for="datetimepicker1">Tanggal :</label>
+                <div class='input-group' id='datetimepicker1' data-td-target-input='nearest' data-td-target-toggle='nearest'>
+                    <input id='datetimepicker1Input' type='text' class='form-control' name="tanggal" data-td-target='#datetimepicker1' required/>
+                    <span class='input-group-text' data-td-target='#datetimepicker1' data-td-toggle='datetimepicker'>
+                        <span class='fas fa-calendar'></span>
+                    </span>
                 </div>
-                <script type="text/javascript">
-                    $(function() {
-                        $('#dtpickerdemo').datetimepicker({
-                            format: "YYYY-MM-DD hh:mm:ss",
-                            "defaultDate": new Date(),
-                            locale : "id"
-                        });
+                <script>
+                    new tempusDominus.TempusDominus(document.getElementById('datetimepicker1'), {
+                        hooks: {
+                            inputFormat: (context, date) => {
+                            return moment(date).format('YYYY-MM-DD hh:mm:ss')
+                            }
+                        }
                     });
                 </script>
             </div>
+
         </div>
         Status
         <input type="radio" id="h" name="status" value="H" @if($a->Status==='H') checked="checked" @endif>
         <label for="h">HADIR</label><br>
         <input type="radio" id="a" name="status" value="A" @if($a->Status==='A') checked="checked" @endif>
-        <label for="a">TIDAK HADIR</label><br>
+        <label for="a">         TIDAK HADIR</label><br>
 
 
 		<input type="submit" value="Simpan Data">

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
+    @extends('layout/happy')
+	<title>tambah pegawai</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
+@section('konten')
 
-	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
 	<h3>Data Pegawai</h3>
 
 	<a href="/pegawai"> Kembali</a>
@@ -21,6 +23,7 @@
 		Alamat <textarea name="alamat" required="required"></textarea> <br/>
 		<input type="submit" value="Simpan Data">
 	</form>
+    @endsection
 
 </body>
 </html>
