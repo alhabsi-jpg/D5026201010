@@ -48,4 +48,24 @@ class SepedamotorController extends Controller
 
         return redirect('/sepedamotor');
     }
+    public function cari(Request $request)
+    {
+        // menangkap data pencarian
+        $cari = $request->cari;
+
+        $sepedamotor = DB::table('sepedamotor')
+        ->where('merksepedamotor','like',"%".$cari."%")
+        ->orWhere('stocksepedamotor','like', "%" . $cari . "%")
+        ->paginate();
+
+
+        return view('sepedamotor.index',['sepedamotor' => $sepedamotor]);
+
+    }
+    public function detail($kodesepedamotor)
+    {
+        $sepedamotor = DB::table('sepedamotor')->where('kodesepedamotor', $kodesepedamotor)->get();
+
+        return view('sepedamotor.detail', ['sepedamotor' => $sepedamotor]);
+    }
 }

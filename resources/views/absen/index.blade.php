@@ -13,7 +13,7 @@
 	<br/>
 	<br/>
 
-	<table border="1">
+	<table border="1" class="table table-responsive table-bordered mb-5 pb-5" >
 		<tr>
 			<th>Nama Pegawai</th>
 			<th>Tanggal</th>

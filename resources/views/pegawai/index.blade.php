@@ -20,7 +20,7 @@
             <a href="/pegawai" class="btn btn-secondary"><i class="fas fa-undo"></i></a>
         </div>
     </div>
-	<table border="1">
+	<table border="1" class="table table-responsive table-bordered mb-5 pb-5">
 		<tr>
 			<th>Nama</th>
 			<th>Jabatan</th>
@@ -38,6 +38,8 @@
 				<a href="/pegawai/edit/{{ $p->pegawai_id }}">Edit</a>
 				|
 				<a href="/pegawai/hapus/{{ $p->pegawai_id }}">Hapus</a>
+                |
+                <a href="/pegawai/view/{{ $p->pegawai_id }}">view detail</a>
 			</td>
 		</tr>
 		@endforeach

@@ -10,12 +10,22 @@
     <h3>Data Pengurus</h3>
 
 	<a href="/sepedamotor/tambah"> + Tambah Pengurus Baru</a>
+    <br>
+    <br>
+    <p>Cari Data Sepedamotor : </p>
+    <div class="d-flex justify-content-start mb-3">
+        <form action="/sepedamotor/cari" method="GET">
+            <input type="search" class="form-control" placeholder="Search..." name="cari" value="{{ old('cari') }}">
+        </form>
+        <div class="text-center ms-3">
+            <a href="/sepedamotor" class="btn btn-secondary"><i class="fas fa-undo"></i></a>
+        </div>
+    </div>
 
 
 	<br/>
 	<br/>
-    <div class="row">
-        <div class="col-auto">
+
             <table class="table table-responsive table-bordered mb-5 pb-5">
                 <tr>
                     <th>Merk Sepeda Motor</th>
@@ -31,12 +41,13 @@
                         <a href="/sepedamotor/edit/{{ $s->kodesepedamotor }}">Edit</a>
                         |
                         <a href="/sepedamotor/hapus/{{ $s->kodesepedamotor }}">Hapus</a>
+                        |
+                        <a href="/sepedamotor/view/{{ $s->kodesepedamotor }}">view detail</a>
                     </td>
                 </tr>
                 @endforeach
             </table>
-        </div>
-      </div>
+
       <div class="halaman pt-3">
         {{ $sepedamotor->links()  }}
     </div>

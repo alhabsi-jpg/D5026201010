@@ -12,7 +12,7 @@
 	<br/>
 	<br/>
 
-	<table border="1">
+	<table border="1" class="table table-responsive table-bordered mb-5 pb-5">
 		<tr>
 			<th>Nama Pegawai</th>
 			<th>Tanggal</th>
@@ -30,6 +30,7 @@
 				<a href="/tugas/edit/{{ $t->ID }}">Edit</a>
                 |
 				<a href="/tugas/hapus/{{ $t->ID }}">Hapus</a>
+
 			</td>
 		</tr>
 		@endforeach

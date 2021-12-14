@@ -40,6 +40,7 @@ Route::get('/pegawai/edit/{id}',[PegawaiController::class, 'edit']);
 Route::post('/pegawai/update',[PegawaiController::class, 'update']);
 Route::get('/pegawai/hapus/{id}',[PegawaiController::class, 'hapus']);
 Route::get('/pegawai/cari',[PegawaiController::class, 'cari']);
+Route::get('/pegawai/view/{id}',[PegawaiController::class, 'detail']);
 //route databse tugas
 Route::get('tugas', [TugasController::class, 'index']);
 Route::get('/tugas/tambah',[TugasController::class, 'tambah']);
@@ -68,6 +69,8 @@ Route::post('/sepedamotor/store',[SepedamotorController::class, 'store']);
 Route::get('/sepedamotor/edit/{id}',[SepedamotorController::class, 'edit']);
 Route::post('/sepedamotor/update',[SepedamotorController::class, 'update']);
 Route::get('/sepedamotor/hapus/{id}',[SepedamotorController::class, 'hapus']);
+Route::get('/sepedamotor/cari',[SepedamotorController::class, 'cari']);
+Route::get('/sepedamotor/view/{id}',[SepedamotorController::class, 'detail']);
 
 
 
