@@ -15,7 +15,6 @@
 		{{ csrf_field() }}
 		<input type="hidden" name="id" value="{{ $a->ID }}">
          <div class="container">
-
             <div class="row">
                 <div class='col-lg-9'>
                     <div class="form-group">
@@ -53,10 +52,12 @@
 
         </div>
         Status
+        <br>
         <input type="radio" id="h" name="status" value="H" @if($a->Status==='H') checked="checked" @endif>
         <label for="h">HADIR</label><br>
         <input type="radio" id="a" name="status" value="A" @if($a->Status==='A') checked="checked" @endif>
-        <label for="a">         TIDAK HADIR</label><br>
+        <label for="a">TIDAK HADIR</label><br>
+        <br>
 
 
 		<input type="submit" value="Simpan Data">

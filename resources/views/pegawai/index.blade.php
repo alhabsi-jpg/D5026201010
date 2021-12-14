@@ -11,7 +11,15 @@
 
 	<br/>
 	<br/>
-
+    <p>Cari Data Pegawai : </p>
+    <div class="d-flex justify-content-start mb-3">
+        <form action="/pegawai/cari" method="GET">
+            <input type="search" class="form-control" placeholder="Search..." name="cari" value="{{ old('cari') }}">
+        </form>
+        <div class="text-center ms-3">
+            <a href="/pegawai" class="btn btn-secondary"><i class="fas fa-undo"></i></a>
+        </div>
+    </div>
 	<table border="1">
 		<tr>
 			<th>Nama</th>
@@ -34,6 +42,10 @@
 		</tr>
 		@endforeach
 	</table>
+    <div class="halaman pt-3">
+    {{ $pegawai->links()  }}
+    </div>
+
     @endsection
 
 

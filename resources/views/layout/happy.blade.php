@@ -50,10 +50,7 @@
                                     <a href="/tugas" class="nav-link text-dark">Data Tugas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link disabled">Minggu Depan</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link disabled">Praktikum</a>
+                                    <a href="/sepedamotor" class="nav-link text-dark">Praktikum</a>
                                 </li>
                             </ul>
                         </div>

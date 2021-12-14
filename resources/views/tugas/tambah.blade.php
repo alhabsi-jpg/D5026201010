@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+    @extends('layout/happy')
 <head>
 	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
 </head>
 <body>
-
+    @section('konten')
 	<h3>Data Tugas</h3>
 
 	<a href="/tugas"> Kembali</a>
@@ -20,6 +21,6 @@
         Status <input type="text" name="status" required="required"><br/>
 		<input type="submit" value="Simpan Data">
 	</form>
-
+    @endsection
 </body>
 </html>

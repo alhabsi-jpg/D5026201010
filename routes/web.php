@@ -6,6 +6,7 @@ use App\Http\Controllers\AbsenController;
 use App\Http\Controllers\TugasController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PengurusController;
+use App\Http\Controllers\SepedamotorController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,6 +39,7 @@ Route::post('/pegawai/store',[PegawaiController::class, 'store']);
 Route::get('/pegawai/edit/{id}',[PegawaiController::class, 'edit']);
 Route::post('/pegawai/update',[PegawaiController::class, 'update']);
 Route::get('/pegawai/hapus/{id}',[PegawaiController::class, 'hapus']);
+Route::get('/pegawai/cari',[PegawaiController::class, 'cari']);
 //route databse tugas
 Route::get('tugas', [TugasController::class, 'index']);
 Route::get('/tugas/tambah',[TugasController::class, 'tambah']);
@@ -59,6 +61,13 @@ Route::post('/absen/store',[AbsenController::class, 'store']);
 Route::get('/absen/edit/{id}',[AbsenController::class, 'edit']);
 Route::post('/absen/update',[AbsenController::class, 'update']);
 Route::get('/absen/hapus/{id}',[AbsenController::class, 'hapus']);
+//route database sepedamotor
+Route::get('sepedamotor', [SepedamotorController::class, 'index']);
+Route::get('/sepedamotor/tambah',[SepedamotorController::class, 'tambah']);
+Route::post('/sepedamotor/store',[SepedamotorController::class, 'store']);
+Route::get('/sepedamotor/edit/{id}',[SepedamotorController::class, 'edit']);
+Route::post('/sepedamotor/update',[SepedamotorController::class, 'update']);
+Route::get('/sepedamotor/hapus/{id}',[SepedamotorController::class, 'hapus']);
 
 
 
