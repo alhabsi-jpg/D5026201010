@@ -16,13 +16,13 @@
 	@foreach($Karyawan1 as $k)
 	<form action="/Karyawan1/update" method="post">
 		{{ csrf_field() }}
-        {{-- <input type="hidden" name="id" value="{{ $k->NIP }}"> --}}
+        <input type="hidden" name="NIP" value="{{ $k->NIP }}">
         <div class="row">
             <div class="col-1">
                 NIP :
             </div>
             <div class="col-1">
-                <input type="" name="NIP" value="{{ $k->NIP }}"> <br/>
+                <input type="text" name="NIP" value="{{ $k->NIP }}"> <br/>
             </div>
         </div>
         <div class="row">
