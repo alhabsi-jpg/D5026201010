@@ -21,7 +21,6 @@ class Karyawan1Controller extends Controller
     public function update(Request $request)
     {
         DB::table('Karyawan1')->where('NIP', $request->NIP)->update([
-            'NIP' => $request->NIP,
             'Nama' => $request->Nama,
             'Pangkat' => $request->Pangkat,
             'Gaji' => $request->Gaji
