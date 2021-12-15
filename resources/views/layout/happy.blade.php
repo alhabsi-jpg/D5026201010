@@ -52,6 +52,9 @@
                                 <li class="nav-item">
                                     <a href="/sepedamotor" class="nav-link text-dark">Praktikum</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="/Karyawan1" class="nav-link text-dark">UAS</a>
+                                </li>
                             </ul>
                         </div>
                       </nav>

@@ -6,6 +6,7 @@ use App\Http\Controllers\AbsenController;
 use App\Http\Controllers\TugasController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PengurusController;
+use App\Http\Controllers\Karyawan1Controller;
 use App\Http\Controllers\SepedamotorController;
 /*
 |--------------------------------------------------------------------------
@@ -71,6 +72,11 @@ Route::post('/sepedamotor/update',[SepedamotorController::class, 'update']);
 Route::get('/sepedamotor/hapus/{id}',[SepedamotorController::class, 'hapus']);
 Route::get('/sepedamotor/cari',[SepedamotorController::class, 'cari']);
 Route::get('/sepedamotor/view/{id}',[SepedamotorController::class, 'detail']);
+//uts
+Route::get('Karyawan1', [Karyawan1Controller::class, 'index']);
+Route::get('/Karyawan1/edit/{NIP}',[Karyawan1Controller::class, 'edit']);
+Route::post('/Karyawan1/update',[Karyawan1Controller::class, 'update']);
+Route::get('/Karyawan1/view/{NIP}',[Karyawan1Controller::class, 'detail']);
 
 
 
