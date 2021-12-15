@@ -21,13 +21,13 @@
                 <p>
             </div>
 
-            <label for="Gaji">Gaji : {{ $k->Gaji }}</label>
+            <label for="Gaji">Gaji : {{ number_format($k->Gaji, 0, ',', '.') }}</label>
             <br>
             <br>
             <p>
 
 
-                <a href="/karyawan1" class="btn btn-primary">Kembali</a>
+                <a href="/Karyawan1" class="btn btn-primary">Kembali</a>
                 <br>
                 </div>
         @endforeach

@@ -8,7 +8,7 @@
 
 	<h3>Edit Karyawan1</h3>
 
-	<a href="/Karyawan"> Kembali</a>
+	<a href="/Karyawan1"> Kembali</a>
 
 	<br/>
 	<br/>
